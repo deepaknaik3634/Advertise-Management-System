@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+</head>
+{% include 'customer_header.html'%}
+<body>
+<form  method="post">
+		{% csrf_token %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 offset-md-4 col-10 offset-1 login-main rounded pb-4 pt-5">
+
+					<div class="row">
+						<div class="col-md-40 col-100 heading-image text-white text-center flex-wrap">
+                            <p class="login2">NEWSPAPER ADD REQUEST</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-12 mt-5">
+					      	<div class="input-group">
+					        	<div class="input-group-prepend">
+					          		<span class="input-group-text bg-white border-0 p-3"><i class="fa fa-user"></i></span>
+					        	</div>
+					        	<input type="text" class="form-control border-0 pl-3" name="t1" placeholder="Customer ID" aria-describedby="validationTooltipUsernamePrepend" required>
+					      	</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-12 mt-3">
+					      	<div class="input-group">
+					        	<div class="input-group-prepend">
+					          		<span class="input-group-text bg-white border-0 p-3" id="validationTooltipUsernamePrepend"><i class="fa fa-file" aria-hidden="true"></i></span>
+					        	</div>
+					        	<input type="file" class="form-control border-0 pl-3 pb-0" name="t2" id="validationTooltipUsername" placeholder="Photo" aria-describedby="validationTooltipUsernamePrepend" required>
+					      	</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-12 mt-3">
+					      	<div class="input-group">
+					      		<p class="request">Request Date: </p>
+					        	<div class="input-group-prepend">
+					          		<span class="input-group-text bg-white border-0 p-3" id="validationTooltipUsernamePrepend"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+					        	</div>
+
+					        	<input type="date" class="form-control border-0 pl-3 pb-0" name="t3" id="validationTooltipUsername" placeholder="Request Date" aria-describedby="validationTooltipUsernamePrepend" required>
+					      	</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-12 mt-3">
+					      	<div class="input-group">
+					      		<p class="request">Date to Post: </p>
+					        	<div class="input-group-prepend">
+					          		<span class="input-group-text bg-white border-0 p-3" id="validationTooltipUsernamePrepend"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+					        	</div>
+
+					        	<input type="date" class="form-control border-0 pl-3 pb-0" name="t4" id="validationTooltipUsername" label="Date to Post:" placeholder="Date To Be Posted"aria-describedby="validationTooltipUsernamePrepend" required>
+					      	</div>
+						</div>
+					</div>
+										<div class="row">
+						<div class="col-md-12 col-12 mt-3">
+					      	<div class="input-group">
+					        	<div class="input-group-prepend">
+					          		<span class="input-group-text bg-white border-0 p-3" id="validationTooltipUsernamePrepend"><i class="fa fa-spinner" aria-hidden="true"></i></span>
+					        	</div>
+
+					        	<input type="text" class="form-control border-0 pl-3 pb-0" name="t5" id="validationTooltipUsername" label="Date to Post:" placeholder="Request Status"aria-describedby="validationTooltipUsernamePrepend" required>
+					      	</div>
+						</div>
+					</div>
+				
+					<div class="row">
+						<div class="col-md-12 col-12 mt-3">
+					      	<button type="submit" class="btn btn-info rounded-1 w-100">Submit</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-12 mt-3 options">
+					      	<div class="row">
+					      		<div class="col-md-6 col-12 pl-4"></div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4 offset-md-4 col-12 text-white text-center mt-2 copyright-main">
+			</div>
+			<div class="col-md-4 offset-md-4 col-12 text-white text-center mt-2 copyright-main">
+			</div>
+			<div class="col-md-4 offset-md-4 col-12 text-white text-center mt-2 copyright-main">
+			</div>
+			<div class="col-md-4 offset-md-4 col-12 text-white text-center mt-2 copyright-main">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

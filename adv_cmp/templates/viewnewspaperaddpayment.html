@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+</head>
+  {% include 'admin_header.html'%}
+<body> <center>
+<form  method="post"><h3>
+    {% csrf_token %}
+   <table border="5">
+    <tr>
+        <td bgcolor="yellow"> Newspaper Id </td>
+        <td bgcolor="yellow">Customer Id</td>
+        <td bgcolor="yellow"> Amount</td>
+        <td bgcolor="yellow"> Payment status</td>
+       
+       
+    </tr>
+  {% for u in userdict %}
+    <tr>
+        <td style="color:white "> {{ u.news_id }}</td>
+        <td style="color:white ">{{ u.customer_id }} </td>
+        <td style="color:white "> {{ u.amount }}</td>
+        <td style="color:white "> {{ u.payment_status }}</td>
+     
+        
+        
+    </tr>
+    {% endfor %}
+
+   </table>
+</form>
+</body>
+</html>

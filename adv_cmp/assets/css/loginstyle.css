@@ -1,0 +1,91 @@
+body{
+  background-image: url("login1.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
+
+}
+
+.form{
+    display: flex;
+      flex-direction: column;
+      height: 500px;
+      width: 400px;
+      border: 5px solid black;
+      align-items: center;
+      margin: auto;
+      margin-top: 50px;
+      background-color: rgba(2, 2, 0,0.5); 
+      box-shadow: inset -5px -5px rgba(0, 0, 0,0.5);
+      border:2px solid black;
+}
+.login-main{
+  margin-top: 150px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0,0.7);
+    box-shadow: inset -5px -5px rgba(0, 0, 0,0.5); 
+   
+}
+.login{
+    color: ;
+    padding-left: 120px;
+    font-style: bold;
+    font-size: 39px;
+    
+    }
+.login1{
+    
+    font-style: bold;
+    font-size: 27px;
+    padding-left: 60px;
+    
+    }
+.Eventlogin{
+    font-style: bold;
+    font-size: 27px;
+    padding-left: 80px;
+    
+}
+
+.loginfoot{
+        color: black;
+    }
+    .loginfoot1{
+        color: white;
+    }
+
+.input-group{
+    border-radius: 25px;
+}
+
+.navbar{
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo{
+    width: 160px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+li a:hover{
+    background: white;
+    transition: 0.05s;
+}
+.navbar a:hover{
+    color: black;

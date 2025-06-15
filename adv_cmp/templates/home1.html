@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{%load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home page</title>
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body bgcolor="black">
+    <div class="banner">
+        <div class="navbar">
+            <img class="logo" src="{% static 'images/adlogo.png'%}" width="120px" height="80px">
+                <ul class="list-unstyled">
+                <li><a href="#">HOME</a></li>
+                <li><a href="{% url 'insertuserreg' %}">SIGN UP</a></li>
+                <li><a href="{% url 'login' %}">SIGN IN</a></li>
+                </ul>
+
+        </div>
+        <div class="content">
+            <h1 style=" text-shadow:3px 4px 5px black;">ADVERTISEMENT<br> MANAGEMENT</h1>
+
+        </div>
+
+    </div>
+
+
+  <div class="box">
+    <div class="new1">
+        <img src="{% static 'images/new.jpg'%}" width="400px" height="500px"
+              style="box-shadow: 1px 2px 4px 5px black;" >
+        <p>Newspaper<br>Deccan Herald[Hubli]<br>Size:4x10cm <br>Copies:20248<br>Price:<i class="fa fa-inr" aria-hidden="true"></i>8250.00</p>
+</div>
+<center>
+ <div class="new2">
+        <img src="{% static 'images/3x5.jpg'%}" width="400px" height="500px"  style="box-shadow: 1px 2px 4px 5px black;">
+        <p>Newspaper<br>Vijaywani[Belagavi]<br>Size:8x15cm <br>Copies:51817<br>Price:<i class="fa fa-inr" aria-hidden="true"></i>585.00</p>
+</div>
+ </center>
+    <div class="new1">
+        <img src="{% static 'images/2x5.jpg'%}" width="400px" height="500px" style="box-shadow: 1px 2px 4px 5px black;" >
+        <p>Newspaper<br>Times of India[Bengaluru]<br>Size:12x8cm <br>Copies:517568<br>Price:<i class="fa fa-inr" aria-hidden="true"></i>5367.00</p>
+</div>
+
+
+<center>
+<div class="new2">
+        <img src="{% static 'images/3x10.png'%}" width="400px" height="500px" style="box-shadow: 1px 2px 4px 5px black;" >
+        <p>Newspaper<br>Tarun Bharat[Belagavi]<br>Size:24x24cm(main page) <br>Copies:154,079<br>Price:<i class="fa fa-inr" aria-hidden="true"></i>9579.00</p>
+</div>
+</center>
+
+</div>
+
+
+</body>
+</html>

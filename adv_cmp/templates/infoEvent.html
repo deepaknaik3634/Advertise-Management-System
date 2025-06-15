@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+
+</head>
+{% include 'customer_header.html'%}
+<body>
+<form  method="post" style="background-image:url('{% static 'images/login1.jpg' %}');";>
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 col-10 offset-1 login-main rounded pb-4 pt-5">
+                <form action="">
+                    <div class="row">
+                        <div class="col-md-40 col-11 heading-image text-white text-center flex-wrap">
+                            <h1><p class="Eventlogin"> Event Information</p></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-5">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control border-0 pl-3" name="t1" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <input type="text" class="form-control border-0 pl-3" name="t2" placeholder="Event Name" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2" id="validationTooltipUsernamePrepend"><i class="fa fa-puzzle-piece" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="text" class="form-control border-0 pl-3 pb-0" name="t3" id="validationTooltipUsername" placeholder="Advertisement Type" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2" id="validationTooltipUsernamePrepend"><i class="fa fa-retweet" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="text" class="form-control border-0 pl-3 pb-0" name="t4" id="validationTooltipUsername" placeholder="Size" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2" id="validationTooltipUsernamePrepend"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="text" class="form-control border-0 pl-3 pb-0" name="t5" id="validationTooltipUsername" placeholder="Quality" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2" id="validationTooltipUsernamePrepend"><i class="fa fa-align-center" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="text" class="form-control border-0 pl-3 pb-0" name="t6" id="validationTooltipUsername" placeholder="Content" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2" id="validationTooltipUsernamePrepend"><i class="fa fa-file" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="file" class="form-control border-0 pl-3 pb-0" name="t7" id="validationTooltipUsername" placeholder="Photo" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <div class="input-group">
+                                <p class="request" style="color:white;">Order Date </p>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-0 p-2" id="validationTooltipUsernamePrepend"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="date" class="form-control border-0 pl-3 pb-0" name="t8" id="validationTooltipUsername" placeholder="Order Date" aria-describedby="validationTooltipUsernamePrepend" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12 mt-3">
+                            <button type="submit" class="btn btn-info rounded-1 w-100">Submit</button>
+                        </div>
+                    </div>
+                    </div>
+        </div>
+    </div>
+    </div>
+                </form>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-image: url('adlogo.png');
+}
+
+.header {
+          padding:25px;
+           }
+
+img { float:left;
+      margin-right:150px; }
+
+h1 { color:white;
+     text-shadow:2px 3px 4px orange; }    
+
+
+.nav ul{ display: flex;
+        background-color:black;
+       padding:10px;
+       justify-content:flex-end; }
+
+.nav a{ color:white;
+        font-size:20px;
+        padding:2px 20px;
+        text-decoration:none; }
+
+.nav a:hover {
+           color:orange;
+           text-decoration:none; }
+
+
+
+

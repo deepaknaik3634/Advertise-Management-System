@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+</head>
+ {% include 'admin_header.html'%}
+<body >
+<center style="background-image:url('{% static 'images/login1.jpg' %}');";>
+    <h1>News Paper Ad Request</h1><br>
+<form  method="post" ><h3>
+    {% csrf_token %}
+   <table border="5">
+    <tr>
+        <td  bgcolor="yellow"> Customer Id</td>
+        <td bgcolor="yellow">Photo </td>
+        <td bgcolor="yellow"> Request Date</td>
+        <td bgcolor="yellow"> Date To Post </td>
+        <td bgcolor="yellow"> Request Status </td>
+       
+    </tr>
+  {% for u in userdict %}
+    <tr>
+        <td style="color:white "> {{ u.cust_id }}</td>
+        <td style="color:white "><img src="../media/{{ u.photo }}" width="200" height="200" /> </td>
+        <td style="color:white "> {{ u.request_date }}</td>
+        <td style="color:white "> {{ u.date_to_posted }}</td>
+        <td style="color:white "> {{ u.request_status }}</td>
+     
+        
+        
+    </tr>
+    {% endfor %}
+
+   </table></h3>
+</form>
+</center>
+</body>
+</html>

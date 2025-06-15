@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="{% static 'css/sty.css' %}">
+
+</head>
+{% include 'customer_header.html'%}
+<body>
+<br>
+<br>
+<br>
+<center>
+    <h1>Invoice Info</h1><br>
+<form  method="post"><h3>
+    {% csrf_token %}
+   <table border="5">
+    <tr>
+        <td bgcolor="yellow"v> Customer Id </td>
+        <td bgcolor="yellow">Event Id </td>
+        <td bgcolor="yellow"> Amount</td>
+        <td bgcolor="yellow"> Total</td>
+        <td bgcolor="yellow">Invoice Status </td>
+       
+    </tr>
+  {% for u in userdict %}
+    <tr>
+        <td style="color:white "> {{ u.cust_id }}</td>
+        <td style="color:white ">{{ u.event_id }} </td>
+        <td style="color:white "> {{ u.amount }}</td>
+        <td style="color:white "> {{ u.grand_total }}</td>
+        <td style="color:white ">{{ u.invoice_status }} </td>
+        
+        
+    </tr>
+    {% endfor %}
+
+   </table>
+</form></h3>
+</center>
+</body>
+</html>
